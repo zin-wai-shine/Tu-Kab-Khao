@@ -7,10 +7,12 @@ const Home = () => {
       <style>{`
         .hero-bg-mobile {
           background-position: center bottom;
+          background-size: 80% auto;
         }
         @media (min-width: 768px) {
           .hero-bg-mobile {
             background-position: center;
+            background-size: cover;
           }
         }
       `}</style>
@@ -20,7 +22,6 @@ const Home = () => {
         style={{
           backgroundColor: '#00203A',
           backgroundImage: `url(${building})`,
-          backgroundSize: 'cover',
           backgroundAttachment: 'fixed',
           backgroundRepeat: 'no-repeat'
         }}
