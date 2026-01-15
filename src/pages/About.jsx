@@ -5,22 +5,33 @@ import familyRecipesImg from '../images/family_recipes_img.png'
 const About = () => {
   return (
     <div>
+      <style>{`
+        .hero-bg-mobile {
+          background-position: center bottom;
+          background-size: cover;
+          background-attachment: scroll;
+        }
+        @media (min-width: 768px) {
+          .hero-bg-mobile {
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+          }
+        }
+      `}</style>
       {/* Hero Section */}
       <section 
-        className="relative h-screen flex items-center justify-center overflow-hidden"
+        className="relative h-screen flex items-center justify-center overflow-hidden hero-bg-mobile"
         style={{
           backgroundColor: '#00203A',
           backgroundImage: `url(${storyBuilding})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed',
           backgroundRepeat: 'no-repeat'
         }}
       >
         {/* Dark Overlay for Text Readability */}
         <div 
           className="absolute inset-0 z-10 pointer-events-none"
-          style={{ backgroundColor: 'rgba(0, 32, 58, 0.4)' }}
+          style={{ backgroundColor: 'rgba(0, 32, 58, 0.3)' }}
         />
         
         <div className="relative z-20 text-center px-4">
