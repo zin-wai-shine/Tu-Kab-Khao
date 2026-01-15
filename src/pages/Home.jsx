@@ -4,14 +4,23 @@ import losterHome from '../images/loster_home.png'
 const Home = () => {
   return (
     <div>
+      <style>{`
+        .hero-bg-mobile {
+          background-position: center bottom;
+        }
+        @media (min-width: 768px) {
+          .hero-bg-mobile {
+            background-position: center;
+          }
+        }
+      `}</style>
       {/* Hero Section */}
       <section 
-        className="relative h-screen flex items-center overflow-hidden"
+        className="relative h-screen flex items-center overflow-hidden hero-bg-mobile"
         style={{
           backgroundColor: '#00203A',
           backgroundImage: `url(${building})`,
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
           backgroundAttachment: 'fixed',
           backgroundRepeat: 'no-repeat'
         }}
