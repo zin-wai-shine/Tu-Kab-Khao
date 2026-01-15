@@ -7,12 +7,14 @@ const Home = () => {
       <style>{`
         .hero-bg-mobile {
           background-position: center bottom;
-          background-size: 80% auto;
+          background-size: cover;
+          background-attachment: scroll;
         }
         @media (min-width: 768px) {
           .hero-bg-mobile {
             background-position: center;
             background-size: cover;
+            background-attachment: fixed;
           }
         }
       `}</style>
@@ -22,14 +24,13 @@ const Home = () => {
         style={{
           backgroundColor: '#00203A',
           backgroundImage: `url(${building})`,
-          backgroundAttachment: 'fixed',
           backgroundRepeat: 'no-repeat'
         }}
       >
         {/* Dark Overlay for Text Readability */}
         <div 
           className="absolute inset-0 z-10 pointer-events-none"
-          style={{ backgroundColor: 'rgba(0, 32, 58, 0.4)' }}
+          style={{ backgroundColor: 'rgba(0, 32, 58, 0.3)' }}
         />
         
         <div className="w-full h-full flex relative z-20">
